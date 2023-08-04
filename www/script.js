@@ -26,6 +26,9 @@ $(document).ready(function() {
                     "User credentials do not match <br>"+
                     "Email:" + user1.email+ 
                     "<br>" +"valid:"+ user1.valid+ "</p>");
+
+                    //$("#h2").html("<h2>"+user1.email+"</h2>");
+
                 }else{
                     $("#return").html("<p> " + "success <br>"
                     + "Email:" + user1.email+ "<br>"
