@@ -21,9 +21,16 @@ $(document).ready(function() {
             dataType : 'json',
             success :function(user1){
                 console.log(user1);
-                $("#return").html("<p> " + "success <br>"+ "Email:"
-                + user1.email+ "<br>" +"valid:"+ user1.valid+ "</p>");
-
+                if (user1.valid == true){
+                    $("#return").html("<p> "+
+                    "User credentials do not match <br>"+
+                    "Email:" + user1.email+ 
+                    "<br>" +"valid:"+ user1.valid+ "</p>");
+                }else{
+                    $("#return").html("<p> " + "success <br>"
+                    + "Email:" + user1.email+ "<br>"
+                    +"valid:"+ user1.valid+ "</p>");
+                }
             },
             error : function(e){
                 alert("error")
