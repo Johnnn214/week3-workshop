@@ -21,7 +21,7 @@ $(document).ready(function() {
             dataType : 'json',
             success :function(user1){
                 console.log(user1);
-                if (user1.valid == true){
+                if (user1.valid == false){
                     $("#return").html("<p> "+
                     "User credentials do not match <br>"+
                     "Email:" + user1.email+ 
